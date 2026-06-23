@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#181818;
+    color:white;
+    font-family:'Inter',sans-serif;
+}
+
+.hero{
+    padding:40px 0;
+}
+
+.container{
+    max-width:1200px;
+}
+
+.tagline{
+    color:#f54809;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.main-title{
+    font-family:'Cinzel',serif;
+    font-size:4.5rem;
+    font-weight:900;
+    margin:15px 0 25px;
+}
+
+.main-title span{
+    color:#f54809;
+}
+
+.story-description{
+    color:#d4d4d4;
+    font-size:1.1rem;
+    line-height:1.9;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.start-btn{
+    background:#f54809;
+    color:white;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:600;
+    border:none;
+    transition:0.3s;
+}
+
+.start-btn:hover{
+    background:#ff6a2e;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 0 20px rgba(245,72,9,0.4);
+}
+
+.latest-btn{
+    background:transparent;
+    color:#d0d0d0;
+    border:1px solid #444;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.latest-btn:hover{
+    border-color:#777;
+    color:white;
+}
+
+.cover-image{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px rgba(245,72,9,0.25);
+
+    transition:0.4s;
+}
+
+.cover-image:hover{
+    transform:scale(1.03);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#888;
+    border-top:1px solid #2d2d2d;
+}
+
+@media(max-width:768px){
+
+    .main-title{
+        font-size:3rem;
+        text-align:center;
+    }
+
+    .tagline{
+        display:block;
+        text-align:center;
+    }
+
+    .story-description{
+        text-align:center;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+}
