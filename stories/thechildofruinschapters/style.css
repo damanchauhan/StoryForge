@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap');
 
+/* =========================
+   GLOBAL
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -12,33 +16,108 @@ body{
     font-family:'Inter',sans-serif;
 }
 
-.container{
-    max-width:900px !important;
+.chapter-reader .container{
+    max-width:900px;
     margin:auto;
 }
 
+/* =========================
+   CHAPTER CARD
+========================= */
+
 .chapter-container{
-    background:#222 !important;
+    background:#222;
     border-radius:20px;
     padding:50px;
     margin:40px 0;
 
     box-shadow:
-    0 0 30px rgba(245,72,9,0.10);
+    0 0 30px rgba(245,72,9,.10);
 }
+
+/* =========================
+   TOP CONTROLS
+========================= */
+
+.chapter-controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.home-btn{
+    display:inline-block;
+
+    background:#222;
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+    border:1px solid #333;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#f54809;
+    color:white;
+}
+
+.chapter-select{
+    background:#222;
+
+    color:white;
+
+    border:1px solid #333;
+
+    border-radius:10px;
+
+    padding:10px 15px;
+
+    min-width:280px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.chapter-select:focus{
+    outline:none;
+    border-color:#f54809;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 .chapter-header{
     text-align:center;
+
     margin-bottom:40px;
-    border-bottom:1px solid #333;
+
     padding-bottom:30px;
+
+    border-bottom:1px solid #333;
 }
 
 .novel-title{
     text-decoration:none;
+
     color:#f54809;
+
     font-size:14px;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
 }
 
@@ -48,10 +127,17 @@ body{
 
 .chapter-title{
     font-family:'Cinzel',serif;
+
     font-size:2.8rem;
+
     margin-top:15px;
+
     color:white;
 }
+
+/* =========================
+   CHAPTER CONTENT
+========================= */
 
 .chapter-content{
     margin-top:20px;
@@ -59,8 +145,11 @@ body{
 
 .chapter-text{
     color:#dcdcdc !important;
+
     font-size:20px !important;
+
     line-height:2 !important;
+
     user-select:text !important;
 }
 
@@ -72,38 +161,114 @@ body{
     color:#f54809;
 }
 
+/* =========================
+   CHAPTER BUTTONS
+========================= */
+
+.button-box{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:50px;
+}
+
 .button-box{
     display:flex;
     justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
     gap:15px;
     margin-top:50px;
 }
 
-.button-box button{
+.chapter-btn{
+    text-decoration:none;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    text-align:center;
+}
+
+/* Previous */
+
+.secondary-btn{
+    background:#2d2d2d;
+    color:white;
+    border:1px solid #444;
+}
+
+.secondary-btn:hover{
+    background:#3a3a3a;
+    color:white;
+}
+
+/* Home */
+
+.home-chapter-btn{
+    background:#222;
+    color:white;
+    border:1px solid #333;
+}
+
+.home-chapter-btn:hover{
+    background:#333;
+    color:white;
+}
+
+/* Next */
+
+.next-btn{
     background:#f54809;
     color:white;
-    border:none;
-    padding:12px 28px;
-    border-radius:10px;
-    font-weight:600;
-    transition:0.3s;
+}
+
+.next-btn:hover{
+    background:#ff6a2e;
+    color:white;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 15px rgba(245,72,9,.4);
 }
 
 .button-box button:hover{
     background:#ff6a2e;
+
     transform:translateY(-2px);
 
     box-shadow:
-    0 0 15px rgba(245,72,9,0.4);
+    0 0 15px rgba(245,72,9,.4);
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     text-align:center;
+
     padding:25px;
-    color:#888;
+
     margin-top:30px;
+
+    color:#888;
+
     border-top:1px solid #333;
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
@@ -121,6 +286,20 @@ footer{
         line-height:1.9 !important;
     }
 
+    .chapter-controls{
+        flex-direction:column;
+    }
+
+    .chapter-select{
+        width:100%;
+        min-width:unset;
+    }
+
+    .home-btn{
+        width:100%;
+        text-align:center;
+    }
+
     .button-box{
         flex-direction:column;
     }
@@ -128,4 +307,11 @@ footer{
     .button-box button{
         width:100%;
     }
+    .button-box{
+    flex-direction:column;
+    }
+ .chapter-btn{
+    width:100%;
+ }
+    
 }
